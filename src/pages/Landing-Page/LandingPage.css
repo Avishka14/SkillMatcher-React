@@ -1,0 +1,159 @@
+
+
+.main-container-landing {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.welcome-section {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.welcome-section h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+  color: #fff; 
+}
+
+@media (min-width: 640px) {
+  .welcome-section h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .welcome-section h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .welcome-section h1 {
+    font-size: 4.5rem;
+  }
+}
+
+
+.welcome-section h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .welcome-section h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .welcome-section h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ...existing code... */
+
+/* Keyframes for star movement */
+@keyframes starry-sky {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes purple-glow {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 5px #a855f7);
+  }
+  50% {
+    filter: brightness(1.5) drop-shadow(0 0 10px #c084fc);
+  }
+}
+
+/* Main container */
+/* ...existing code... */
+.main-container-landing {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  min-height: 100vh; /* Add this line */
+  width: 100vw;      /* Optional: ensures full width */
+}
+/* ...existing code... */
+
+/* Galaxy overlay background */
+.main-container-landing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 70% 20%, #4b0082 0%, #1a0033 50%, #000000 100%);
+  opacity: 0.5; /* reduced opacity so stars are visible */
+  z-index: 0;   /* behind stars and content */
+}
+
+/* Star layers */
+.stars, .stars-medium, .stars-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* above overlay */
+  animation: starry-sky linear infinite;
+}
+
+
+.stars { animation-duration: 100s; }
+.stars-medium { animation-duration: 200s; }
+.stars-large { animation-duration: 300s; }
+
+
+.stars::before, .stars-medium::before, .stars-large::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: purple-glow 3s ease-in-out infinite;
+  box-shadow:
+    /* Small stars */
+    100px 200px 0 0 white, 300px 50px 0 0 white, 500px 450px 0 0 white, 700px 700px 0 0 white, 900px 100px 0 0 white,
+    250px 800px 0 0 white, 450px 120px 0 0 white, 650px 300px 0 0 white, 850px 600px 0 0 white, 50px 950px 0 0 white,
+    150px 1000px 0 0 white, 350px 1500px 0 0 white, 550px 1800px 0 0 white, 750px 1300px 0 0 white, 950px 1700px 0 0 white,
+    /* Medium, glowing stars */
+    100px 1200px 0 2px #a855f7, 300px 1500px 0 2px #8b5cf6, 500px 1800px 0 2px #c084fc, 700px 1300px 0 2px #a855f7,
+    900px 200px 0 2px #8b5cf6, 200px 400px 0 2px #a855f7, 400px 600px 0 2px #c084fc, 600px 800px 0 2px #8b5cf6,
+    /* Large, distant glows */
+    1500px 500px 0 5px #c084fc, 2000px 800px 0 5px #a855f7, 2500px 1000px 0 5px #8b5cf6;
+}
+
+
