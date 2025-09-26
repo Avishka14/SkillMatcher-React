@@ -1,12 +1,9 @@
 import React from "react";
 import "./LandingPage.css";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
 const LandingPage = () => {
   return (
     <>
-      <Header />
       <div className="main-container-landing min-h-screen text-white flex flex-col items-center justify-center p-4 md:p-8 rounded-xl overflow-hidden">
         <div className="stars"></div>
         <div className="stars-medium"></div>
@@ -127,8 +124,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };
