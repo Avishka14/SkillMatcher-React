@@ -4,9 +4,9 @@ import Logo from '../../assets/images/header/ico.png';
 const Header = () => {
   return (
     <header className="header">
-      {/* Container for the logo and navigation links */}
+
       <div className="header-container">
-        {/* Logo Section */}
+
         <div className="logo">
           <a href="#">
             <img src={Logo} alt="SkillMatcher Logo" className="logo-image" />
@@ -14,7 +14,7 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Desktop Navigation Links */}
+
         <nav className="nav-links">
           <a href="#">Jobs</a>
           <a href="#">Log In</a>
@@ -23,7 +23,7 @@ const Header = () => {
           <a href="#">About</a>
         </nav>
 
-        {/* Mobile menu button */}
+
         <div className="mobile-menu">
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" className="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
