@@ -6,34 +6,71 @@
 
 body {
   overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 .header {
   position: relative;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem; 
   color: white;
   background: radial-gradient(at 50% 0%, #9900ff 0%, #1a0033 60%, #000000 100%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .header-container {
   width: 100%;
   max-width: 1200px;
-  height: 10%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem; 
 }
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+  white-space: nowrap;
+}
+
+
+.logo a p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+
+.glow-link {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.glow-link:hover {
+  color: #ffffff;
+  text-shadow: 
+    0 0 10px #ffffff, 
+    0 0 20px #ffffff, 
+    0 0 30px #ffffff;
+}
+
+
 
 .nav-links {
   display: none;
-  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2rem; 
 }
 
 .nav-links a {
-  margin-left: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
@@ -44,25 +81,6 @@ body {
 .nav-links a:hover {
   color: #ea00ff;
 }
-
-.logo a {
-  display: flex;           
-  align-items: center;      
-  text-decoration: none;
-}
-
-.logo-image {
-  height: 60px;
-  width: auto;
-}
-
-.logo p {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-left: 0.5rem;
-  color: #ffffff;
-}
-
 
 
 .mobile-menu {
@@ -77,14 +95,14 @@ body {
 }
 
 .menu-icon {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.75rem;
+  width: 1.75rem;
 }
+
 
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
-    align-items: center;
   }
   .mobile-menu {
     display: none;
@@ -92,7 +110,15 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .nav-links a {
-    margin-left: 3rem;
+  .header {
+    padding: 1.5rem 4rem; 
+  }
+
+  .logo {
+    gap: 2rem;
+  }
+
+  .nav-links {
+    gap: 3rem; 
   }
 }

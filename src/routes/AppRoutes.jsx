@@ -7,6 +7,7 @@ import LogIn from "../pages/LogIn/LogIn.jsx";
 import SignUp from "../pages/SignUp/SignUp.jsx";
 import Job from "../pages/Job-Page/Job.jsx";
 import Pricing from "../pages/Pricing/Pricing.jsx";
+import CvFilter from "../pages/CvFilter/CvFilter.jsx";
 
 export default function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function AppRoutes() {
       <Route path="/signin" element={<SignUp />} />
       <Route path="/jobs" element={<Job />} />
       <Route path="/pricing" element={<Pricing />} />
+      <Route path="/cvfilter" element={<CvFilter/>} />
     </Routes>
   );
 }
