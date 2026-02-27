@@ -8,9 +8,10 @@ const Header = () => {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <img src={Logo} alt="SkillMatcher Logo" className="logo-image" />
             <p>SkillMacther</p>
           </Link>
+
+          <Link  className="glow-link">Find By CV🚀</Link>
         </div>
 
         <nav className="nav-links">
